@@ -1,0 +1,30 @@
+// Override Foundation default colours
+.top-bar, .top-bar ul {
+  background-color: $nav-color;
+  color: $title-color;
+  cursor: default;
+}
+
+// Set the colours for the links,
+// Timer and Countdown
+.link-color-style {
+  color: $link-color;
+  transition: color 0.1s ease-in;
+}
+
+.link-color-style:hover,
+.link-color-style:focus {
+  color: $title-color;
+}
+
+// Set the colour for the link to Github
+.github-color-style {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.1s ease-in;
+}
+
+.github-color-style:hover,
+.github-color-style:focus {
+  color: #000;
+}
