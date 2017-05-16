@@ -35,6 +35,8 @@
     "minimatch": "^3.0.2",
     "mocha": "^2.4.5",
     "node-sass": "^4.5.2",
+    "react-addons-test-utils": "^0.14.7",
+    "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.3",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
