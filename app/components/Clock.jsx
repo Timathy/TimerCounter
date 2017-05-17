@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Clock = React.createClass({
+const Clock = React.createClass({
   getDefaultProps: function () {
     seconds: 0
   },
