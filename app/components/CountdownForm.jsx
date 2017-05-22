@@ -5,14 +5,22 @@ const CountdownForm = React.createClass({
     event.preventDefault();
     var stringSeconds = this.refs.seconds.value;
 
-    if (stringSeconds.match(/^[0-9]*$/)) {
-      this.refs.seconds.value = '';
-      this.props.onSetCountdown(parseInt(stringSeconds, 10));
-    }
+    // If the string value is not empty or its length is
+    // greater than 0, then execute the code, if it isn't
+    // throw an error
+    if (stringSeconds !== '' || stringSeconds.length > 0) {
+      if (stringSeconds.match(/^[0-9]*$/)) {
+        this.refs.seconds.value = '';
+        this.props.onSetCountdown(parseInt(stringSeconds, 10));
+      }
 
-    if (parseInt(stringSeconds, 10) > 86400) {
+      if (parseInt(stringSeconds, 10) > 86400) {
+        alert('Please enter a valid amount of seconds.');
+      }
+    } else {
       alert('Please enter a valid amount of seconds.');
     }
+
   },
 
   render: function () {
