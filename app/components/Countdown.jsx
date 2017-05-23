@@ -16,6 +16,9 @@ const Countdown = React.createClass({
         case 'started':
           this.startTimer();
           break;
+        case 'stopped':
+          clearInterval(this.timer);
+          break;
       }
     }
   },
@@ -29,7 +32,15 @@ const Countdown = React.createClass({
       });
 
       if (newCount === 0) {
-        clearInterval(this.timer);
+        this.setState({
+          count: 0,
+          countdownStatus: 'stopped'
+        });
+        // clearInterval(this.timer);
+        //
+        // this.timer = setTimeout( () => {
+        //   this.startTimer();
+        // }, 2000);
       }
     }, 1000);
   },
