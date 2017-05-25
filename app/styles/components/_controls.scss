@@ -1,0 +1,37 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .button {
+    width: 30%;
+  }
+
+  .button:first-child {
+    margin-right: 1.5rem;
+  }
+
+  .button.hollow.warning {
+    border: 1px solid #ffae00;
+    color: #ffae00;
+  }
+
+  .button.hollow.warning:hover,
+  .button.hollow.warning:focus {
+    border: 1px solid #ffae00;
+    background-color: #ffae00;
+    color: #fff;
+  }
+
+  .button.hollow.alert {
+    border: 1px solid #ec5840;
+    color: #ec5840;
+  }
+
+  .button.hollow.alert:hover,
+  .button.hollow.alert:focus {
+    border: 1px solid #ec5840;
+    background-color: #ec5840;
+    color: #fff;
+  }
+}

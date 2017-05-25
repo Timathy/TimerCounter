@@ -32,15 +32,3 @@
   background-color: $clock-bg-color;
   color: #fff;
 }
-
-.button.hollow.warning {
-  border: 1px solid #ffae00;
-  color: #ffae00;
-}
-
-.button.hollow.warning:hover,
-.button.hollow.warning:focus {
-  border: 1px solid #ffae00;
-  background-color: #ffae00;
-  color: #fff;
-}
