@@ -112,6 +112,7 @@ const Countdown = React.createClass({
 
     return (
       <div>
+        <h1 className="menu-text text-center text-title">Countdown</h1>
         <Clock seconds={count}/>
         {displayControls()}
       </div>
