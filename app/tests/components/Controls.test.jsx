@@ -8,13 +8,15 @@ var TestUtils = require('react-addons-test-utils');
 var Controls = require('Controls');
 
 describe('Controls', function () {
+  var doNothingFunc = () => {};
+
   it('should exist', () => {
     expect(Controls).toExist();
   });
 
   describe('render', function () {
     it('should set pause button when started', () => {
-      var controls = TestUtils.renderIntoDocument(<Controls countdownStatus="started"/>);
+      var controls = TestUtils.renderIntoDocument(<Controls countdownStatus="started" onStatusChange={doNothingFunc}/>);
       var $el = jQuery(ReactDOM.findDOMNode(controls));
       var $pauseButton = $el.find('button:contains(Pause)');
 
@@ -22,7 +24,7 @@ describe('Controls', function () {
     });
 
     it('should set start button when paused', () => {
-      var controls = TestUtils.renderIntoDocument(<Controls countdownStatus="paused"/>);
+      var controls = TestUtils.renderIntoDocument(<Controls countdownStatus="paused" onStatusChange={doNothingFunc}/>);
       var $el = jQuery(ReactDOM.findDOMNode(controls));
       var $startButton = $el.find('button:contains(Start)');
 
